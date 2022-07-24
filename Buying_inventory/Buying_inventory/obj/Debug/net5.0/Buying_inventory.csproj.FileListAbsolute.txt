@@ -1,0 +1,16 @@
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\bin\Debug\net5.0\Buying_inventory.exe
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\bin\Debug\net5.0\Buying_inventory.deps.json
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\bin\Debug\net5.0\Buying_inventory.runtimeconfig.json
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\bin\Debug\net5.0\Buying_inventory.runtimeconfig.dev.json
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\bin\Debug\net5.0\Buying_inventory.dll
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\bin\Debug\net5.0\ref\Buying_inventory.dll
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\bin\Debug\net5.0\Buying_inventory.pdb
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\obj\Debug\net5.0\Buying_inventory.csproj.AssemblyReference.cache
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\obj\Debug\net5.0\Buying_inventory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\obj\Debug\net5.0\Buying_inventory.AssemblyInfoInputs.cache
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\obj\Debug\net5.0\Buying_inventory.AssemblyInfo.cs
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\obj\Debug\net5.0\Buying_inventory.csproj.CoreCompileInputs.cache
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\obj\Debug\net5.0\Buying_inventory.dll
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\obj\Debug\net5.0\ref\Buying_inventory.dll
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\obj\Debug\net5.0\Buying_inventory.pdb
+C:\Users\rekak\source\repos\Buying_inventory\Buying_inventory\obj\Debug\net5.0\Buying_inventory.genruntimeconfig.cache

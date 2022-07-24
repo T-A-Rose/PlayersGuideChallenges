@@ -1,0 +1,7 @@
+C:\Users\rekak\source\repos\DominionOfKings\DominionOfKings\bin\Debug\DominionOfKings.exe.config
+C:\Users\rekak\source\repos\DominionOfKings\DominionOfKings\bin\Debug\DominionOfKings.exe
+C:\Users\rekak\source\repos\DominionOfKings\DominionOfKings\bin\Debug\DominionOfKings.pdb
+C:\Users\rekak\source\repos\DominionOfKings\DominionOfKings\obj\Debug\DominionOfKings.csproj.AssemblyReference.cache
+C:\Users\rekak\source\repos\DominionOfKings\DominionOfKings\obj\Debug\DominionOfKings.csproj.CoreCompileInputs.cache
+C:\Users\rekak\source\repos\DominionOfKings\DominionOfKings\obj\Debug\DominionOfKings.exe
+C:\Users\rekak\source\repos\DominionOfKings\DominionOfKings\obj\Debug\DominionOfKings.pdb

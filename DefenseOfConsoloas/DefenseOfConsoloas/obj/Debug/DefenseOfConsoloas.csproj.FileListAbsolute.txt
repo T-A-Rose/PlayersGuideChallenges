@@ -1,0 +1,7 @@
+C:\Users\rekak\source\repos\DefenseOfConsoloas\DefenseOfConsoloas\bin\Debug\DefenseOfConsoloas.exe.config
+C:\Users\rekak\source\repos\DefenseOfConsoloas\DefenseOfConsoloas\bin\Debug\DefenseOfConsoloas.exe
+C:\Users\rekak\source\repos\DefenseOfConsoloas\DefenseOfConsoloas\bin\Debug\DefenseOfConsoloas.pdb
+C:\Users\rekak\source\repos\DefenseOfConsoloas\DefenseOfConsoloas\obj\Debug\DefenseOfConsoloas.csproj.AssemblyReference.cache
+C:\Users\rekak\source\repos\DefenseOfConsoloas\DefenseOfConsoloas\obj\Debug\DefenseOfConsoloas.csproj.CoreCompileInputs.cache
+C:\Users\rekak\source\repos\DefenseOfConsoloas\DefenseOfConsoloas\obj\Debug\DefenseOfConsoloas.exe
+C:\Users\rekak\source\repos\DefenseOfConsoloas\DefenseOfConsoloas\obj\Debug\DefenseOfConsoloas.pdb

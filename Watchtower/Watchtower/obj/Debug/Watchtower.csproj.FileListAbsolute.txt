@@ -1,0 +1,7 @@
+C:\Users\rekak\source\repos\Watchtower\Watchtower\bin\Debug\Watchtower.exe.config
+C:\Users\rekak\source\repos\Watchtower\Watchtower\bin\Debug\Watchtower.exe
+C:\Users\rekak\source\repos\Watchtower\Watchtower\bin\Debug\Watchtower.pdb
+C:\Users\rekak\source\repos\Watchtower\Watchtower\obj\Debug\Watchtower.csproj.AssemblyReference.cache
+C:\Users\rekak\source\repos\Watchtower\Watchtower\obj\Debug\Watchtower.csproj.CoreCompileInputs.cache
+C:\Users\rekak\source\repos\Watchtower\Watchtower\obj\Debug\Watchtower.exe
+C:\Users\rekak\source\repos\Watchtower\Watchtower\obj\Debug\Watchtower.pdb

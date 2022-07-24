@@ -1,0 +1,16 @@
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\bin\Debug\net5.0\ReplicatorOfDTo.exe
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\bin\Debug\net5.0\ReplicatorOfDTo.deps.json
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\bin\Debug\net5.0\ReplicatorOfDTo.runtimeconfig.json
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\bin\Debug\net5.0\ReplicatorOfDTo.runtimeconfig.dev.json
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\bin\Debug\net5.0\ReplicatorOfDTo.dll
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\bin\Debug\net5.0\ref\ReplicatorOfDTo.dll
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\bin\Debug\net5.0\ReplicatorOfDTo.pdb
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\obj\Debug\net5.0\ReplicatorOfDTo.csproj.AssemblyReference.cache
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\obj\Debug\net5.0\ReplicatorOfDTo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\obj\Debug\net5.0\ReplicatorOfDTo.AssemblyInfoInputs.cache
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\obj\Debug\net5.0\ReplicatorOfDTo.AssemblyInfo.cs
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\obj\Debug\net5.0\ReplicatorOfDTo.csproj.CoreCompileInputs.cache
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\obj\Debug\net5.0\ReplicatorOfDTo.dll
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\obj\Debug\net5.0\ref\ReplicatorOfDTo.dll
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\obj\Debug\net5.0\ReplicatorOfDTo.pdb
+C:\Users\rekak\source\repos\ReplicatorOfDTo\ReplicatorOfDTo\obj\Debug\net5.0\ReplicatorOfDTo.genruntimeconfig.cache

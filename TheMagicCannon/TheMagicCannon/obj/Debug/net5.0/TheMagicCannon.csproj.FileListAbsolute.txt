@@ -1,0 +1,16 @@
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\bin\Debug\net5.0\TheMagicCannon.exe
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\bin\Debug\net5.0\TheMagicCannon.deps.json
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\bin\Debug\net5.0\TheMagicCannon.runtimeconfig.json
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\bin\Debug\net5.0\TheMagicCannon.runtimeconfig.dev.json
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\bin\Debug\net5.0\TheMagicCannon.dll
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\bin\Debug\net5.0\ref\TheMagicCannon.dll
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\bin\Debug\net5.0\TheMagicCannon.pdb
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\obj\Debug\net5.0\TheMagicCannon.csproj.AssemblyReference.cache
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\obj\Debug\net5.0\TheMagicCannon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\obj\Debug\net5.0\TheMagicCannon.AssemblyInfoInputs.cache
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\obj\Debug\net5.0\TheMagicCannon.AssemblyInfo.cs
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\obj\Debug\net5.0\TheMagicCannon.csproj.CoreCompileInputs.cache
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\obj\Debug\net5.0\TheMagicCannon.dll
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\obj\Debug\net5.0\ref\TheMagicCannon.dll
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\obj\Debug\net5.0\TheMagicCannon.pdb
+C:\Users\rekak\source\repos\TheMagicCannon\TheMagicCannon\obj\Debug\net5.0\TheMagicCannon.genruntimeconfig.cache
