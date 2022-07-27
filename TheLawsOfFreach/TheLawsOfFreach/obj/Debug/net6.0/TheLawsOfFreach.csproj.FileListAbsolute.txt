@@ -1,0 +1,15 @@
+C:\Repos\PlayersGuideChallenges\TheLawsOfFreach\TheLawsOfFreach\bin\Debug\net6.0\TheLawsOfFreach.exe
+C:\Repos\PlayersGuideChallenges\TheLawsOfFreach\TheLawsOfFreach\bin\Debug\net6.0\TheLawsOfFreach.deps.json
+C:\Repos\PlayersGuideChallenges\TheLawsOfFreach\TheLawsOfFreach\bin\Debug\net6.0\TheLawsOfFreach.runtimeconfig.json
+C:\Repos\PlayersGuideChallenges\TheLawsOfFreach\TheLawsOfFreach\bin\Debug\net6.0\TheLawsOfFreach.dll
+C:\Repos\PlayersGuideChallenges\TheLawsOfFreach\TheLawsOfFreach\bin\Debug\net6.0\TheLawsOfFreach.pdb
+C:\Repos\PlayersGuideChallenges\TheLawsOfFreach\TheLawsOfFreach\obj\Debug\net6.0\TheLawsOfFreach.csproj.AssemblyReference.cache
+C:\Repos\PlayersGuideChallenges\TheLawsOfFreach\TheLawsOfFreach\obj\Debug\net6.0\TheLawsOfFreach.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\PlayersGuideChallenges\TheLawsOfFreach\TheLawsOfFreach\obj\Debug\net6.0\TheLawsOfFreach.AssemblyInfoInputs.cache
+C:\Repos\PlayersGuideChallenges\TheLawsOfFreach\TheLawsOfFreach\obj\Debug\net6.0\TheLawsOfFreach.AssemblyInfo.cs
+C:\Repos\PlayersGuideChallenges\TheLawsOfFreach\TheLawsOfFreach\obj\Debug\net6.0\TheLawsOfFreach.csproj.CoreCompileInputs.cache
+C:\Repos\PlayersGuideChallenges\TheLawsOfFreach\TheLawsOfFreach\obj\Debug\net6.0\TheLawsOfFreach.dll
+C:\Repos\PlayersGuideChallenges\TheLawsOfFreach\TheLawsOfFreach\obj\Debug\net6.0\refint\TheLawsOfFreach.dll
+C:\Repos\PlayersGuideChallenges\TheLawsOfFreach\TheLawsOfFreach\obj\Debug\net6.0\TheLawsOfFreach.pdb
+C:\Repos\PlayersGuideChallenges\TheLawsOfFreach\TheLawsOfFreach\obj\Debug\net6.0\TheLawsOfFreach.genruntimeconfig.cache
+C:\Repos\PlayersGuideChallenges\TheLawsOfFreach\TheLawsOfFreach\obj\Debug\net6.0\ref\TheLawsOfFreach.dll
