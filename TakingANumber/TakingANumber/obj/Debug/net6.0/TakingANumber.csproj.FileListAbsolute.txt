@@ -1,0 +1,15 @@
+C:\Repos\PlayersGuideChallenges\TakingANumber\TakingANumber\bin\Debug\net6.0\TakingANumber.exe
+C:\Repos\PlayersGuideChallenges\TakingANumber\TakingANumber\bin\Debug\net6.0\TakingANumber.deps.json
+C:\Repos\PlayersGuideChallenges\TakingANumber\TakingANumber\bin\Debug\net6.0\TakingANumber.runtimeconfig.json
+C:\Repos\PlayersGuideChallenges\TakingANumber\TakingANumber\bin\Debug\net6.0\TakingANumber.dll
+C:\Repos\PlayersGuideChallenges\TakingANumber\TakingANumber\bin\Debug\net6.0\TakingANumber.pdb
+C:\Repos\PlayersGuideChallenges\TakingANumber\TakingANumber\obj\Debug\net6.0\TakingANumber.csproj.AssemblyReference.cache
+C:\Repos\PlayersGuideChallenges\TakingANumber\TakingANumber\obj\Debug\net6.0\TakingANumber.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\PlayersGuideChallenges\TakingANumber\TakingANumber\obj\Debug\net6.0\TakingANumber.AssemblyInfoInputs.cache
+C:\Repos\PlayersGuideChallenges\TakingANumber\TakingANumber\obj\Debug\net6.0\TakingANumber.AssemblyInfo.cs
+C:\Repos\PlayersGuideChallenges\TakingANumber\TakingANumber\obj\Debug\net6.0\TakingANumber.csproj.CoreCompileInputs.cache
+C:\Repos\PlayersGuideChallenges\TakingANumber\TakingANumber\obj\Debug\net6.0\TakingANumber.dll
+C:\Repos\PlayersGuideChallenges\TakingANumber\TakingANumber\obj\Debug\net6.0\refint\TakingANumber.dll
+C:\Repos\PlayersGuideChallenges\TakingANumber\TakingANumber\obj\Debug\net6.0\TakingANumber.pdb
+C:\Repos\PlayersGuideChallenges\TakingANumber\TakingANumber\obj\Debug\net6.0\TakingANumber.genruntimeconfig.cache
+C:\Repos\PlayersGuideChallenges\TakingANumber\TakingANumber\obj\Debug\net6.0\ref\TakingANumber.dll
