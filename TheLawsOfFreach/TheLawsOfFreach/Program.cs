@@ -16,3 +16,7 @@ foreach (int index in array)
 };
 Console.WriteLine(average);
 Console.ReadLine();
+
+int[,] matrix = new int[3, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 } };
+Console.WriteLine(matrix[1, 1]);
+Console.ReadLine();
