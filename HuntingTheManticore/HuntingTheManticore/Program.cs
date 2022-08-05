@@ -2,6 +2,7 @@
 int cityHealth = 15;
 int rounds = 1;
 int range = -1;
+int targetRange = -1;
 int cannonDamage = 0;
 while (manticoreHealth > 0)
 {
@@ -34,26 +35,27 @@ while (manticoreHealth > 0)
 
 void ManticoresDistanceFromCity()
 {
-    range = -1;
     Console.WriteLine("Player 1, how far away is the Manticore from the city, between 0 - 100?");
-    do
+
+    //do
+    //{
+    //    range = Convert.ToInt32(Console.ReadLine());
+    //    if (range < 0 || range > 100)
+    //        Console.WriteLine("That wasn't between the boundaries, please enter a value between 0 - 100!");
+    //} while (range < 0 || range > 100);
+
+    while (true)
     {
         range = Convert.ToInt32(Console.ReadLine());
-        if (range >= 0 && range <= 100)
-        {
-            break;
-        } else
-        {
-            Console.WriteLine("That wasn't between the boundaries, please enter a value between 0 - 100!");
-        }       
-    } while (range < 0 || range > 100);
+        if (range >= 0 && range <= 100) break;
+        Console.WriteLine("That wasn't between the boundaries, please enter a value between 0 - 100!");
+    };
 }
 
 void TargetRangeFromPlayerTwo(int manticoreRange, int cannonDamage)
 {
     Console.WriteLine("Player 2, please enter the desired cannon range, between 0 - 100");
-    int targetRange = -1;
-    while (targetRange < 0 || targetRange > 100)
+    do
     {
         targetRange = Convert.ToInt32(Console.ReadLine());
         if (targetRange == manticoreRange)
@@ -73,7 +75,7 @@ void TargetRangeFromPlayerTwo(int manticoreRange, int cannonDamage)
             break;
         }
         Console.WriteLine("That wasn't between the boundaries, please enter a value between 0 - 100!");
-    };
+    } while (targetRange < 0 || targetRange > 100);
 }
 
 int CalculateCannonDamage(int roundNo)
@@ -83,21 +85,21 @@ int CalculateCannonDamage(int roundNo)
         Console.ForegroundColor = ConsoleColor.Magenta;
         Console.WriteLine("The Cannon will deal 10 fire-electric blast damage to the Manticore!");
         return 10;
-    } else if (roundNo % 5 == 0)
+    } 
+    if (roundNo % 5 == 0)
     {
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("The Cannon will deal 3 electric blast damage to the Manticore!");
         return 3;
-    } else if (roundNo % 3 == 0)
+    } 
+    if (roundNo % 3 == 0)
     {
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("The Cannon will deal 3 fire blast damage to the Manticore!");
         return 3;
-    } else
-    {
+    } 
         Console.WriteLine("The Cannon will deal 1 damage to the Manticore!");
         return 1;
-    }
 }
 
 
