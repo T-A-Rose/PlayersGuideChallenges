@@ -8,6 +8,7 @@ while (manticoreHealth > 0)
     Console.ForegroundColor = ConsoleColor.White;
     ManticoresDistanceFromCity();
     Console.Clear();
+    Console.WriteLine($"The City currently has { cityHealth} health and the Manticore has { manticoreHealth} left!");
     cannonDamage = CalculateCannonDamage(rounds);
     TargetRangeFromPlayerTwo(range, cannonDamage);
     Console.ForegroundColor = ConsoleColor.White;
@@ -27,7 +28,7 @@ while (manticoreHealth > 0)
         Console.ReadLine();
         break;
     }
-    Console.WriteLine($"There has currently been {rounds} round played. The City currently has {cityHealth} health and the Manticore has {manticoreHealth} left!");
+    Console.WriteLine($"There has currently been {rounds} round played.");
     rounds++;
 };
 
