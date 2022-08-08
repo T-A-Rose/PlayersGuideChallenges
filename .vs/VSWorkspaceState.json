@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\HuntingTheManticore",
+    "\\HuntingTheManticore\\HuntingTheManticore"
   ],
-  "SelectedNode": "\\Watchtower.sln",
+  "SelectedNode": "\\HuntingTheManticore\\HuntingTheManticore\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
