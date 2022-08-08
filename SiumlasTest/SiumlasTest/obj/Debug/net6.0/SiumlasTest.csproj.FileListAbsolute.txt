@@ -1,0 +1,15 @@
+C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\bin\Debug\net6.0\SiumlasTest.exe
+C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\bin\Debug\net6.0\SiumlasTest.deps.json
+C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\bin\Debug\net6.0\SiumlasTest.runtimeconfig.json
+C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\bin\Debug\net6.0\SiumlasTest.dll
+C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\bin\Debug\net6.0\SiumlasTest.pdb
+C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\obj\Debug\net6.0\SiumlasTest.csproj.AssemblyReference.cache
+C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\obj\Debug\net6.0\SiumlasTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\obj\Debug\net6.0\SiumlasTest.AssemblyInfoInputs.cache
+C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\obj\Debug\net6.0\SiumlasTest.AssemblyInfo.cs
+C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\obj\Debug\net6.0\SiumlasTest.csproj.CoreCompileInputs.cache
+C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\obj\Debug\net6.0\SiumlasTest.dll
+C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\obj\Debug\net6.0\refint\SiumlasTest.dll
+C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\obj\Debug\net6.0\SiumlasTest.pdb
+C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\obj\Debug\net6.0\SiumlasTest.genruntimeconfig.cache
+C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\obj\Debug\net6.0\ref\SiumlasTest.dll
