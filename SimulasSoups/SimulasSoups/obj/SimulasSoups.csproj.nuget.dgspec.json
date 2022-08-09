@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rekak\\source\\repos\\PlayersGuideChallenges\\SimulasSoups\\SimulasSoups\\SimulasSoups.csproj": {}
+    "C:\\Repos\\PlayersGuideChallenges\\SimulasSoups\\SimulasSoups\\SimulasSoups.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rekak\\source\\repos\\PlayersGuideChallenges\\SimulasSoups\\SimulasSoups\\SimulasSoups.csproj": {
+    "C:\\Repos\\PlayersGuideChallenges\\SimulasSoups\\SimulasSoups\\SimulasSoups.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rekak\\source\\repos\\PlayersGuideChallenges\\SimulasSoups\\SimulasSoups\\SimulasSoups.csproj",
+        "projectUniqueName": "C:\\Repos\\PlayersGuideChallenges\\SimulasSoups\\SimulasSoups\\SimulasSoups.csproj",
         "projectName": "SimulasSoups",
-        "projectPath": "C:\\Users\\rekak\\source\\repos\\PlayersGuideChallenges\\SimulasSoups\\SimulasSoups\\SimulasSoups.csproj",
-        "packagesPath": "C:\\Users\\rekak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rekak\\source\\repos\\PlayersGuideChallenges\\SimulasSoups\\SimulasSoups\\obj\\",
+        "projectPath": "C:\\Repos\\PlayersGuideChallenges\\SimulasSoups\\SimulasSoups\\SimulasSoups.csproj",
+        "packagesPath": "C:\\Users\\atomr\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos\\PlayersGuideChallenges\\SimulasSoups\\SimulasSoups\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\rekak\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\atomr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
