@@ -7,4 +7,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SiumlasTest
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\
+=======
+build_property.ProjectDir = C:\Users\rekak\source\repos\PlayersGuideChallenges\SiumlasTest\SiumlasTest\
+>>>>>>> 6a972cdefb6f51361b5aac7d14b5a127e3b684c0

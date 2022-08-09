@@ -1,0 +1,15 @@
+C:\Users\rekak\source\repos\PlayersGuideChallenges\SimulasSoups\SimulasSoups\bin\Debug\net6.0\SimulasSoups.exe
+C:\Users\rekak\source\repos\PlayersGuideChallenges\SimulasSoups\SimulasSoups\bin\Debug\net6.0\SimulasSoups.deps.json
+C:\Users\rekak\source\repos\PlayersGuideChallenges\SimulasSoups\SimulasSoups\bin\Debug\net6.0\SimulasSoups.runtimeconfig.json
+C:\Users\rekak\source\repos\PlayersGuideChallenges\SimulasSoups\SimulasSoups\bin\Debug\net6.0\SimulasSoups.dll
+C:\Users\rekak\source\repos\PlayersGuideChallenges\SimulasSoups\SimulasSoups\bin\Debug\net6.0\SimulasSoups.pdb
+C:\Users\rekak\source\repos\PlayersGuideChallenges\SimulasSoups\SimulasSoups\obj\Debug\net6.0\SimulasSoups.csproj.AssemblyReference.cache
+C:\Users\rekak\source\repos\PlayersGuideChallenges\SimulasSoups\SimulasSoups\obj\Debug\net6.0\SimulasSoups.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rekak\source\repos\PlayersGuideChallenges\SimulasSoups\SimulasSoups\obj\Debug\net6.0\SimulasSoups.AssemblyInfoInputs.cache
+C:\Users\rekak\source\repos\PlayersGuideChallenges\SimulasSoups\SimulasSoups\obj\Debug\net6.0\SimulasSoups.AssemblyInfo.cs
+C:\Users\rekak\source\repos\PlayersGuideChallenges\SimulasSoups\SimulasSoups\obj\Debug\net6.0\SimulasSoups.csproj.CoreCompileInputs.cache
+C:\Users\rekak\source\repos\PlayersGuideChallenges\SimulasSoups\SimulasSoups\obj\Debug\net6.0\SimulasSoups.dll
+C:\Users\rekak\source\repos\PlayersGuideChallenges\SimulasSoups\SimulasSoups\obj\Debug\net6.0\refint\SimulasSoups.dll
+C:\Users\rekak\source\repos\PlayersGuideChallenges\SimulasSoups\SimulasSoups\obj\Debug\net6.0\SimulasSoups.pdb
+C:\Users\rekak\source\repos\PlayersGuideChallenges\SimulasSoups\SimulasSoups\obj\Debug\net6.0\SimulasSoups.genruntimeconfig.cache
+C:\Users\rekak\source\repos\PlayersGuideChallenges\SimulasSoups\SimulasSoups\obj\Debug\net6.0\ref\SimulasSoups.dll
