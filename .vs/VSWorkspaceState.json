@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HuntingTheManticore\\HuntingTheManticore",
-    "\\SimulasSoups",
-    "\\SimulasSoups\\SimulasSoups"
+    "\\SimulasSoups\\SimulasSoups",
+    "\\VinFletchersArrows"
   ],
-  "SelectedNode": "\\SimulasSoups\\SimulasSoups\\Program.cs",
+  "SelectedNode": "\\VinFletchersArrows\\VinFletchersArrows.sln",
   "PreviewInSolutionExplorer": false
 }
