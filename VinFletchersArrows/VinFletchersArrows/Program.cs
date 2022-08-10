@@ -42,7 +42,10 @@ float SetArrowLength()
     return arrowLength = Convert.ToInt32(Console.ReadLine());
 }
 
-Arrow designedArrow = new Arrow(arrowHT, arrowFT, arrowLength);
+var arrowHeadCostMapper = new ArrowHeadCostMapper();
+var arrowFletchingCostMapper = new ArrowFletchingCostMapper();
+
+Arrow designedArrow = new Arrow(arrowHT, arrowFT, arrowLength, arrowHeadCostMapper, arrowFletchingCostMapper);
 
 Console.WriteLine($"The cost for that arrow will be {designedArrow.GetCost()} gold pieces!");
 
