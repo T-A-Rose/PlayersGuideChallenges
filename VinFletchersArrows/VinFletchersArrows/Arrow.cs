@@ -8,9 +8,9 @@ namespace VinFletchersArrows
 {
     class Arrow
     {
-        public ArrowHeadType _arrowHeadType;
-        public ArrowFletchingType _fletchingType;
-        public float _length;
+        private ArrowHeadType _arrowHeadType;
+        private ArrowFletchingType _fletchingType;
+        private float _length;
 
         public Arrow(ArrowHeadType arrowheadType, ArrowFletchingType fletchingType, float length)
         {
@@ -19,12 +19,49 @@ namespace VinFletchersArrows
             _length = length;
         }
 
-        //public float GetCost()
-        //{
-        //    return (float)((arrowHeadCost + arrowFletchingCost) + (0.05 * _arrowShaft));
-        //}
+        public Arrow(){
+        }
+
+       public float GetCost()
+        {
+            float arrowHTCost = 0;
+            float arrowFTCost = 0;
+
+            switch (_arrowHeadType)
+            {
+                case ArrowHeadType.steel:
+                    arrowHTCost = 10;
+                    break;
+                case ArrowHeadType.wood:
+                    arrowHTCost = 3;
+                    break;
+                case ArrowHeadType.obsidian:
+                    arrowHTCost = 5;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (_fletchingType)
+            {
+                case ArrowFletchingType.plastic:
+                    arrowFTCost = 10;
+                    break;
+                case ArrowFletchingType.turkeyfeathers:
+                    arrowFTCost = 5;
+                    break;
+                case ArrowFletchingType.goosefeathers:
+                    arrowFTCost = 3;
+                    break;
+                default:
+                    break;
+            }
+            return ((arrowHTCost + arrowFTCost) + (_length * 0.05f));
+        }
     }
 
-    enum ArrowHeadType { steel, wood, obsidian};
-    enum ArrowFletchingType { plastic, turkeyfeathers, goosefeathers};
+    
+
+    public enum ArrowHeadType { steel, wood, obsidian };
+    public enum ArrowFletchingType { plastic, turkeyfeathers, goosefeathers };
 }
