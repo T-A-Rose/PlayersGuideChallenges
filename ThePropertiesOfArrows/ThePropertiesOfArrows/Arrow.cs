@@ -8,30 +8,34 @@ namespace VinFletchersArrows
 {
     class Arrow
     {
-        private ArrowHeadType _arrowHeadType;
-        private ArrowFletchingType _fletchingType;
-        private float _length;
+        //private ArrowHeadType _arrowHeadType;
+        //private ArrowFletchingType _fletchingType;
+        //private float Length;
 
         public Arrow(ArrowHeadType arrowheadType, ArrowFletchingType fletchingType, float length)
         {
-            _arrowHeadType = arrowheadType;
-            _fletchingType = fletchingType;
-            _length = length;
+            ArrowHeadType = arrowheadType;
+            ArrowFletchingType = fletchingType;
+            Length = length;
         }
 
         public Arrow(){
         }
 
-        private ArrowHeadType GetArrowHeadType() => _arrowHeadType;
-        private ArrowFletchingType GetArrowFletchingType() => _fletchingType;
-        private float GetLength() => _length;
+        //private ArrowHeadType GetArrowHeadType() => _arrowHeadType;
+        //private ArrowFletchingType GetArrowFletchingType() => _fletchingType;
+        //private float GetLength() => _length;
+
+        private ArrowHeadType ArrowHeadType { get; }
+        private ArrowFletchingType ArrowFletchingType { get; }
+        private float Length { get; }
 
         public float GetCost()
         {
             float arrowHTCost = 0;
             float arrowFTCost = 0;
 
-            switch (_arrowHeadType)
+            switch (ArrowHeadType)
             {
                 case ArrowHeadType.steel:
                     arrowHTCost = 10;
@@ -46,7 +50,7 @@ namespace VinFletchersArrows
                     break;
             }
 
-            switch (_fletchingType)
+            switch (ArrowFletchingType)
             {
                 case ArrowFletchingType.plastic:
                     arrowFTCost = 10;
@@ -60,7 +64,7 @@ namespace VinFletchersArrows
                 default:
                     break;
             }
-            return ((arrowHTCost + arrowFTCost) + (_length * 0.05f));
+            return ((arrowHTCost + arrowFTCost) + (Length * 0.05f));
         }
     }
     public enum ArrowHeadType { steel, wood, obsidian };
