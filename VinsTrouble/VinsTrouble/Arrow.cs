@@ -14,15 +14,19 @@ namespace VinFletchersArrows
 
         public Arrow(ArrowHeadType arrowheadType, ArrowFletchingType fletchingType, float length)
         {
-            _arrowHeadType = arrowheadType;
-            _fletchingType = fletchingType;
-            _length = length;
+            //_arrowHeadType = arrowheadType;
+            //_fletchingType = fletchingType;
+            //_length = length;
         }
 
         public Arrow(){
         }
 
-       public float GetCost()
+        private ArrowHeadType GetArrowHeadType() => _arrowHeadType;
+        private ArrowFletchingType GetArrowFletchingType() => _fletchingType;
+        private float GetLength() => _length;
+
+        public float GetCost()
         {
             float arrowHTCost = 0;
             float arrowFTCost = 0;
