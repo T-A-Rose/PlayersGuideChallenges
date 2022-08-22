@@ -44,7 +44,7 @@ float SetArrowLength()
 
 Arrow designedArrow = new Arrow(arrowHT, arrowFT, arrowLength);
 
-Console.WriteLine($"The cost for that arrow will be {designedArrow.GetCost()} gold pieces!");
+Console.WriteLine($"The cost for that arrow will be {designedArrow.GetCost} gold pieces!");
 
 Console.ReadLine();
 
