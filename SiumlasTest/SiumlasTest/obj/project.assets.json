@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\rekak\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\atomr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rekak\\source\\repos\\PlayersGuideChallenges\\SiumlasTest\\SiumlasTest\\SiumlasTest.csproj",
+      "projectUniqueName": "C:\\Repos\\PlayersGuideChallenges\\SiumlasTest\\SiumlasTest\\SiumlasTest.csproj",
       "projectName": "SiumlasTest",
-      "projectPath": "C:\\Users\\rekak\\source\\repos\\PlayersGuideChallenges\\SiumlasTest\\SiumlasTest\\SiumlasTest.csproj",
-      "packagesPath": "C:\\Users\\rekak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rekak\\source\\repos\\PlayersGuideChallenges\\SiumlasTest\\SiumlasTest\\obj\\",
+      "projectPath": "C:\\Repos\\PlayersGuideChallenges\\SiumlasTest\\SiumlasTest\\SiumlasTest.csproj",
+      "packagesPath": "C:\\Users\\atomr\\.nuget\\packages\\",
+      "outputPath": "C:\\Repos\\PlayersGuideChallenges\\SiumlasTest\\SiumlasTest\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\rekak\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\atomr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
