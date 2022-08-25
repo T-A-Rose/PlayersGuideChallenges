@@ -1,7 +1,15 @@
 ﻿using TheColour;
 
 Color firstColor = new Color(254, 54, 3);
-
-Console.WriteLine($"{firstColor.RedValue} {firstColor.GreenValue} {firstColor.BlueValue}");
-Console.WriteLine(Color.Blue);
+Color secondColor = Color.Orange;
+DisplayColorVals(firstColor);
+DisplayColorVals(secondColor);
 Console.ReadLine();
+
+void DisplayColorVals(Color color)
+{
+    Console.WriteLine($"({color.RedValue}, {color.GreenValue}, {color.BlueValue})");
+};
+
+//THIS DOESN'T WORK, BUT I'M NOT SURE WHY, CAN ANYONE EXPLAIN?
+Console.WriteLine(secondColor);

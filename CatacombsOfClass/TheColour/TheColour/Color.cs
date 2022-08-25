@@ -9,9 +9,9 @@ namespace TheColour
     internal class Color
     {
 
-        public int RedValue { get; set; }
-        public int GreenValue { get; set; }
-        public int BlueValue { get; set; }
+        public int RedValue { get; }
+        public int GreenValue { get; }
+        public int BlueValue { get; }
 
         public Color(int r, int g, int b)
         {
@@ -20,21 +20,20 @@ namespace TheColour
             BlueValue = b;
         }
 
-        public static Color White() => new Color(255, 255, 255);
+        public static Color White { get; } = new(255, 255, 255);
 
-        public static Color Black() => new Color(0, 0, 0);
+        public static Color Black { get; } = new(0, 0, 0);
 
-        public static Color Red() => new Color(255, 0, 0);
+        public static Color Red { get; } = new(255, 0, 0);
 
-        public static Color Orange() => new Color(255, 165, 0);
+        public static Color Orange { get; } = new(255, 165, 0);
 
-        public static Color Yellow() => new Color(255, 255, 0);
+        public static Color Yellow { get; } = new(255, 255, 0);
 
-        public static Color Green() => new Color(0, 128, 0);
+        public static Color Green { get; } = new(0, 128, 0);
 
-        public static Color Blue() => new Color(0, 0, 255);
+        public static Color Blue { get; } = new(0, 0, 255);
   
-        public static Color Purple() => new Color(128, 0, 128);
-
+        public static Color Purple { get; } = new(128, 0, 128);
     }
 }
