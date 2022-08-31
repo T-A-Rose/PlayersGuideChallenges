@@ -8,7 +8,7 @@ namespace TheLockedDoor
 {
     internal  class Door
     {
-        int doorPassCode = 1234;
+        int doorPassCode;
 
         public Door(int _doorPassCode)
         {
@@ -25,8 +25,8 @@ namespace TheLockedDoor
             if (currentPasscode == inputtedPasscode)
             {
                 Console.WriteLine("That passcode was correct, you must now set the new passcode you want!");
-                inputtedPasscode = Convert.ToInt32(Console.ReadLine());
-                return (int)inputtedPasscode;
+                doorPassCode = Convert.ToInt32(Console.ReadLine());
+                return doorPassCode;
             }
             else
             {
@@ -45,21 +45,31 @@ namespace TheLockedDoor
                     case "lock":
                         if (DoorStatus == DoorState.closed) DoorStatus = DoorState.locked;
                         break;
-                    case "open":
+                    case "unlock":
                         if (DoorStatus == DoorState.locked && passcode == doorPassCode)
                         {
-                            DoorStatus = DoorState.open;
+                            DoorStatus = DoorState.unlocked;
                         } else
                         {
                             Console.WriteLine("That was an incorrect passcode, please try again");
                         }
                         break;
+                    case "open":
+                        if (DoorStatus == DoorState.unlocked) DoorStatus = DoorState.open;
+                        break;
                     case "change passcode":
                         ChangeDoorPassCode(passcode);
                         break;
                 }
+            ReturnDoorStatus();
         }
+
+        public void ReturnDoorStatus()
+        {
+            Console.WriteLine($"The door status is currently: {DoorStatus}");
+        }
+
     }
 
-    public enum DoorState { open, closed, locked }
+    public enum DoorState { open, closed, locked, unlocked }
 }

@@ -8,18 +8,23 @@ public class main
         Door door = new Door(PassCode);
         Console.Clear();
 
-        InteractWithDoor(door);
+        InteractWithDoor(door, PassCode);
         
     }
 
-    private static void InteractWithDoor(Door door)
+    private static void InteractWithDoor(Door door, int passcode)
     {
-        Console.WriteLine("If you want to unlock the door, you have to provide me with a passcode!");
+
         for (int i = 0; i < 5; i++)
         {
-            int passcode = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("What do you want to do with the door?");
-            door.ChangeDoorState(passcode, Console.ReadLine());
+            string? doorCommand = Console.ReadLine().ToLower();
+            if (doorCommand == "unlock")
+            {
+                Console.WriteLine("If you want to do that, you have to provide me with a passcode!");
+                passcode = Convert.ToInt32(Console.ReadLine());
+            }
+            door.ChangeDoorState(passcode, doorCommand);
         };
     }
 
