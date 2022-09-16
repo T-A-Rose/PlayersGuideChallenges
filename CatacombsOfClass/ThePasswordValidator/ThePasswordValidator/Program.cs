@@ -5,5 +5,5 @@ while (true)
 {
     string word = MO.ReadMessage();
     PasswordValidator PWV = new(word);
-    PWV.ValidatePasswordLength(word);
+    PWV.ValidatePassword();
 };

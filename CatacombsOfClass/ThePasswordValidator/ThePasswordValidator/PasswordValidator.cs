@@ -15,7 +15,7 @@ namespace ThePasswordValidator
             _password = password;
         }
 
-        public void ValidatePasswordLength(string password)
+        private void ValidatePasswordLength(string password)
         {
             if (password.Length >= 6 && password.Length <= 13)
             {
@@ -39,24 +39,24 @@ namespace ThePasswordValidator
 
         private void ValidateIndividualCharacters(string password)
         {
-            int upperCaseCount = 0;
-            int lowerCaseCount = 0;
+            bool upperCaseIncl = false;
+            bool lowerCaseIncl = false;
             int numberCount = 0;
                 foreach (char letter in password)
                 {
                     if (char.IsUpper(letter))
                     {
-                        upperCaseCount++;
+                        upperCaseIncl = true;
                     } else if (char.IsLower(letter))
                     {
-                        lowerCaseCount++;
+                        lowerCaseIncl = true;
                     } else if (char.IsDigit(letter))
                     {
                         numberCount++;
                     }
                 }
 
-            if (upperCaseCount > 0 && lowerCaseCount > 0 && numberCount > 0)
+            if (upperCaseIncl && lowerCaseIncl && numberCount > 0)
             {
                 ValidatePassword();
             } else
@@ -65,8 +65,11 @@ namespace ThePasswordValidator
             }
         }
 
-        private void ValidatePassword()
+        public void ValidatePassword()
         {
+            ValidatePasswordLength(_password);
+
+
             MO.DisplayMessage("That password is valid!");
         }
 
