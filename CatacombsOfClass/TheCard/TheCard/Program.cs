@@ -1,31 +1,20 @@
 ﻿
+using TheCard;
+
 DisplayEachCard();
 
-int DisplayEachCard()
+void DisplayEachCard()
 {
-    foreach (int i in CardColour.GetValues(typeof(CardColour))){
-        Console.WriteLine(i);
+    foreach (string cardColour in CardColour.GetNames(typeof(CardColour)))
+    {
+        foreach (string cardRank in CardRank.GetNames(typeof(CardRank)))
+        {
+            Card card = new(cardColour, cardRank);
+            card.DetermineCard();
+        }
     }
-    return 1;
+    Console.ReadLine();
 }
 
-public class Card
-{
-    CardColour CC;
-    CardRank CR;
-
-    public Card(CardColour _CC, CardRank _CR)
-    {
-        CC = _CC;
-        CR = _CR;
-    }
-
-    public CardColour DetermineCard()
-    {
-        return new CardColour();
-    }
-
-}
-
-public enum CardColour { red, green, blue, yellow};
-public enum CardRank { one = 1, two = 2, three = 3, four = 4, five = 5, six = 6, seven = 7, eight = 8, nine = 9, ten = 10, dollar = 11, percentage = 12, Caret = 13, ampersand = 14};
+public enum CardColour { Red, Green, Blue, Yellow};
+public enum CardRank { One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Dollar, Percentage, Caret, Ampersand};
