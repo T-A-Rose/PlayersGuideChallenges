@@ -12,10 +12,11 @@ namespace PackingInventory
         private double weight { get; set; }
         private double volume { get; set; }
         
-        private int maxNumberOfItems { get; }
+        private int maxNumberOfItems { get; set; }
         private double maxItemWeight { get; }
         private double maxItemVolume { get; }
-        
+        private readonly List<InventoryItem> _items = new();
+
 
         InventoryItem[] packTotal;
 
@@ -28,16 +29,22 @@ namespace PackingInventory
 
         public bool Add(InventoryItem item)
         {
-            if (itemCount > maxNumberOfItems)
+            if (itemCount > maxNumberOfItems) return false;
+            if (weight > maxItemWeight) return false;
+            if (volume > maxItemVolume) return false;
+            
+            weight += item.ItemWeight;
+            volume += item.ItemVolume;
+            _items.Add(item);
+            return true;
+        }
+
+        public void DisplayItems()
+        {
+            foreach (InventoryItem item in _items)
             {
-                return false;
-            } else
-            {
-                itemCount += 1;
-                weight += item.ItemWeight;
-                volume += item.ItemVolume;
-                return true;
-            };
+                Console.WriteLine(item);
+            }
         }
 
     }

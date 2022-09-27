@@ -5,7 +5,7 @@ public class main
     {
         Console.WriteLine("Hello Adventurer, in order to pass through this door, you need to provide me with a starting passcode!");
         int PassCode = Convert.ToInt32(Console.ReadLine());
-        Door door = new Door(PassCode);
+        Door door = new(PassCode);
         Console.Clear();
 
         InteractWithDoor(door, PassCode);
