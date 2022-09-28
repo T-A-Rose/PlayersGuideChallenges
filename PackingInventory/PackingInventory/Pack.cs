@@ -33,8 +33,8 @@ namespace PackingInventory
             if (weight > maxItemWeight) return false;
             if (volume > maxItemVolume) return false;
             
-            weight += item.ItemWeight;
-            volume += item.ItemVolume;
+            weight += item.itemWeight;
+            volume += item.itemVolume;
             _items.Add(item);
             return true;
         }
@@ -43,7 +43,7 @@ namespace PackingInventory
         {
             foreach (InventoryItem item in _items)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(item.name);
             }
         }
 

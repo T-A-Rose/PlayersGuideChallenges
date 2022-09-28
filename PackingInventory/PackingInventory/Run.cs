@@ -14,14 +14,12 @@ namespace PackingInventory
 
         static public void Main(String[] args)
         {
-            GetItems();
+            var run = new Run();
+            run.GetItems();
         }
 
         public void GetItems()
         {
-           bool test = pack.Add(new Sword());
-            Console.WriteLine(test);
-
             Console.WriteLine("Hello adventurer, please select an item to add to your pack, although please bare in mind you can only carry so much!");
             Console.WriteLine("The options are as follows: Sword, Bow, Arrow, Food, Water & finally Rope");
  
@@ -39,7 +37,14 @@ namespace PackingInventory
                     "rope" => pack.Add(new Rope()),
                     _ => throw new Exception()
                 };
-                if (!isValid) Console.Write("Not valid");
+                if (!isValid)
+                {
+                    Console.Write("That's not possible I'm afraid, your pack is full!");
+                    break;
+                } else
+                {
+                    Console.WriteLine("That's great, please select another item to add from the previous list!");
+                }
                 pack.DisplayItems();
             }
         }

@@ -1,12 +1,18 @@
 ﻿public class InventoryItem
 {
-    public double ItemWeight { get; }
-    public double ItemVolume { get; }
+    public double itemWeight { get; }
+    public double itemVolume { get; }
+    public string name { get; }
 
-    public InventoryItem(double itemWeight, double itemVolume)
+    public InventoryItem(double itemWeight, double itemVolume, string name)
     {
-        ItemVolume = itemVolume;
-        ItemWeight = itemWeight;
+        this.itemVolume = itemVolume;
+        this.itemWeight = itemWeight;
+        this.name = name;
     }
 
+    // PascalCase
+    // camelCase
+    // snake_case
+    // kebab-case
 }
