@@ -43,8 +43,18 @@ namespace PackingInventory
         {
             foreach (InventoryItem item in _items)
             {
-                Console.WriteLine(item.name);
+                Console.WriteLine(item);
             }
+        }
+
+        public override string ToString()
+        {
+            string packContents = "";
+            foreach (InventoryItem item in _items)
+            {
+                packContents += $"{item}, ";
+            }
+            return $"Pack contains {packContents}";
         }
 
     }

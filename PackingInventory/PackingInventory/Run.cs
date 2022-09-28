@@ -45,7 +45,7 @@ namespace PackingInventory
                 {
                     Console.WriteLine("That's great, please select another item to add from the previous list!");
                 }
-                pack.DisplayItems();
+                Console.WriteLine(pack.ToString());
             }
         }
 

@@ -9,8 +9,12 @@ namespace PackingInventory
     internal class Food : InventoryItem
     {
 
-        public Food() : base(1, 0.5, "Food")
+        public Food() : base(1, 0.5)
         {
+        }
+        public override string ToString()
+        {
+            return "Food";
         }
 
     }
