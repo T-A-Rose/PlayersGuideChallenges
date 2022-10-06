@@ -8,7 +8,7 @@ namespace TheOldRobot
 {
     public abstract class RobotCommand
     {
-        public void Run(Robot robot)
+        public virtual void Run(Robot robot)
         {
             if (robot.IsPowered) Execute(robot);
         }

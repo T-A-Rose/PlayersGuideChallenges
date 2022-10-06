@@ -15,22 +15,22 @@ namespace TheOldRobot
             Console.WriteLine("Hello adventurer, please enter a command for the robot to execute!");
             Console.WriteLine("The options are as follows: Power on, Power off, North, East, South & West");
 
-            int inputInstructions = 0;
-            while (inputInstructions < 3)
+            for (int i = 0; i < robot.Commands.Length; i++)
             {
-                string userInput = Console.ReadLine();
-                var isValid = userInput switch
+                string userInput = Console.ReadLine().ToLower();
+                robot.Commands[i] = userInput switch
                 {
-                    "Power on" => new OnCommand(),
-                    "Power off" => new OffCommand(),
-                    "North" => new NorthCommand(),
-                    "East" => new EastCommand(),
-                    "South" => new SouthCommand(),
-                    "West" => new WestCommand(),
+                    "power on" => new OnCommand(),
+                    "power off" => new OffCommand(),
+                    "north" => new NorthCommand(),
+                    "east" => new EastCommand(),
+                    "south" => new SouthCommand(),
+                    "west" => new WestCommand(),
                     _ => throw new Exception()
                 };
-                inputInstructions++;
             }
+            robot.Run();
+            Console.ReadLine();
         }
     }
 }
