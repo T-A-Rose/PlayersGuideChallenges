@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace TheOldRobot
 {
-    public class OnCommand : RobotCommand
+    public class OnCommand : IRobotCommand
     {
-        protected override void Execute(Robot robot) => robot.IsPowered = true;
+        void IRobotCommand.Execute(Robot robot) => robot.IsPowered = true;
 
-        public override void Run(Robot robot) => robot.IsPowered = true;
+        public void Run(Robot robot) => robot.IsPowered = true;
     }
 }

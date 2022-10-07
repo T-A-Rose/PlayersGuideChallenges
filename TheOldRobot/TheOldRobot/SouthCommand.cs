@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TheOldRobot
 {
-    internal class SouthCommand : RobotCommand
-    {               
-        protected override void Execute(Robot robot) => robot.Y -= 1;
+    internal class SouthCommand : IRobotCommand
+    {
+        void IRobotCommand.Execute(Robot robot) => robot.Y -= 1;
     }
 }

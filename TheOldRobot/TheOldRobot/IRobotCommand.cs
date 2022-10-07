@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TheOldRobot
 {
-    public abstract class RobotCommand
+    public interface IRobotCommand
     {
-        public virtual void Run(Robot robot)
+        void Run(Robot robot)
         {
             if (robot.IsPowered) Execute(robot);
         }
