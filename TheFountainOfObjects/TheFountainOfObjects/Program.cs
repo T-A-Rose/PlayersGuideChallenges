@@ -1,8 +1,8 @@
 ﻿using TheFountainOfObjects;
 
-var player = new Player();
+var player = new Player(new(0, 0));
 //var cavernEntrance = new Location(0, 0);
-var cavernEntrance = new CavernEntrance();
+var cavernEntrance = new CavernEntrance(new(0,0));
 
 
 Console.WriteLine("Hello adventurer! Would you like to play a small, medium or large game?");
@@ -15,12 +15,12 @@ Map GameSize() => Console.ReadLine().ToLower() switch
     "large" => new Map(8, 8),
 };
 
-player.playerLocation = cavernEntrance;
+player.PlayerLocation = cavernEntrance.Location;
 Console.WriteLine("You find yourself at the cavern entrance of the Fountain of Objects");
 
 do
 {
-    Console.WriteLine($"You are at Row={player.playerLocation.Row}, Column={player.playerLocation.Column}");
+    Console.WriteLine($"You are at Row={player.PlayerLocation.Row}, Column={player.PlayerLocation.Column}");
     player.isAlive = false;
 } while (player.isAlive);
 
