@@ -2,5 +2,6 @@
 
 public class Fountain : IRooms
 {
-    public Location Type { get; }
+    public int Row { get; set; } = 0;
+    public int Column { get; set; } = 2;
 }

@@ -2,5 +2,6 @@
 
 public interface IRooms
 {
-    public Location location { get; }
+    int Row { get; set; }
+    int Column { get; set; }
 }
