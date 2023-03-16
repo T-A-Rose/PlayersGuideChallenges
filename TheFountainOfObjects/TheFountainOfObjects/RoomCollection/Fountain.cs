@@ -2,6 +2,11 @@
 
 public class Fountain : IRooms
 {
-    public int Row { get; set; } = 0;
-    public int Column { get; set; } = 2;
+    public Location Location { get; set; }
+    public bool OnStatus { get; set; } = false;
+
+    public Fountain(Location location)
+    {
+        Location = location;
+    }
 }

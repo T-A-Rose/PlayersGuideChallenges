@@ -3,16 +3,14 @@
 public class Map
 {
     public int[,] Rooms { get; set; }
-    public int Row { get; }
-    public int Column { get; }
-
-    public Map(int _row, int _column)
+    private int Row { get; }
+    private int Column { get; }
+    public int[,] MapCoordindates { get; }
+    
+    public Map(int[,] mapCoordinates)
     {
-        Row = _row;
-        Column = _column;
-        
+        MapCoordindates = mapCoordinates;
     }
-
     static void Movement(int row, int column)
     {
       
