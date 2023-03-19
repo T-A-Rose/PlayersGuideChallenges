@@ -1,4 +1,6 @@
 ﻿using TheFountainOfObjects;
+using System.Linq;
+using System.ComponentModel;
 
 var player = new Player();
 //var cavernEntrance = new Location(0, 0);
@@ -6,7 +8,7 @@ var cavernEntrance = new CavernEntrance(new Location(0, 0));
 var fountainRoom = new Fountain(new Location(0, 2));
 
 Console.WriteLine("Hello adventurer! Would you like to play a small, medium or large game?");
-var play = GameSize();
+var mapSize = GameSize();
 
 Map GameSize() => Console.ReadLine().ToLower() switch
 {
@@ -16,52 +18,56 @@ Map GameSize() => Console.ReadLine().ToLower() switch
 };
 
 player.playerLocation = cavernEntrance.Location;
-var playerLocRow = player.playerLocation.row;
-var playerLocCol = player.playerLocation.column;
+var playerLocY = player.playerLocation.row;
+var playerLocX = player.playerLocation.column;
 Console.WriteLine("You find yourself at the cavern entrance of the Fountain of Objects");
 
 do
 {
-    Console.WriteLine($"You are in the room at (Row={player.playerLocation.row}, Column={player.playerLocation.column})");
-    checkLocation();
+    Console.WriteLine($"You are in the room at (Row={playerLocY}, Column={playerLocX})");
+    ValidLocation();
     if (player.playerLocation == fountainRoom.Location && fountainRoom.OnStatus == true)
     {
         Console.WriteLine("You win!");
     }
 } while (player.isAlive);
 
-void checkLocation()
+
+void ValidLocation()
 {
-    Console.WriteLine("Where would you like to go?");
-    var temp = Console.ReadLine() switch
-    {
-        "Move east" => ValidLocation("Move east"),
-        "Move west" => ValidLocation("Move west"),
-        "Move north" => ValidLocation("Move north"),
-        "Move south" => ValidLocation("Move south"),
-        _ => "Incorrect instruction, please try again"
-    };
+    string direction = Console.ReadLine().ToLower();
+    ConfirmValidGridLoc(direction);
 }
 
-string ValidLocation(string direction)
+void ConfirmValidGridLoc(string direction)
 {
-    if (direction == "Move east")
+    int test = (int)Math.Sqrt(mapSize.MapCoordindates.Length);
+    if ((direction == "move east") && (playerLocX >= 0 && (playerLocX + 1) <= mapSize.MapCoordindates.Length / test))
     {
-        player.playerLocation = new Location(playerLocRow, playerLocCol += 1);
-    }
-    ConfirmValidGridLoc(play, player);
-
-    return "";
-}
-
-void ConfirmValidGridLoc(Map map, Player player1)
-{
-    for (var i = 0; i < map.MapCoordindates.Length; i++)
+        player.playerLocation = new Location(playerLocY, playerLocX += 1);
+        return;
+    } else
     {
-        if (player1.playerLocation.row > i)
-        {
-            Console.WriteLine("You're unable to go that far!");
-        }
+        player.playerLocation = new Location(playerLocY, playerLocX -= 1);
+        return;
     }
+
+
+
+    //} else if ((direction == "move west") && ((playerLocX + 1) >= 0 && playerLocX <= mapSize.MapCoordindates.Length / test))
+    //{
+    //    player.playerLocation = new Location(playerLocY, playerLocX -= 1);
+    if ((direction == "move north") && (playerLocY < 0 || (playerLocY - 1) > mapSize.MapCoordindates.Length / test))
+    {
+        player.playerLocation = new Location(playerLocY -= 1, playerLocY);
+
+    } else
+    {
+        player.playerLocation = new Location(playerLocY += 1, playerLocY);
+    }
+    //} else if ((direction == "move south") && ((playerLocY + 1) < 0 || playerLocY > mapSize.MapCoordindates.Length / test))
+    //{
+    //    player.playerLocation = new Location(playerLocY += 1, playerLocY);
+    //}
 }
 
