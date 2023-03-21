@@ -35,21 +35,30 @@ do
 
 void ValidLocation()
 {
-    string direction = Console.ReadLine().ToLower();
+    var direction = Console.ReadLine().ToLower();
     ConfirmValidGridLoc(direction);
 }
 
 void ConfirmValidGridLoc(string direction)
 {
-    int test = (int)Math.Sqrt(mapSize.MapCoordindates.Length);
-    if ((direction == "move east") && (playerLocX >= 0 && (playerLocX + 1) <= mapSize.MapCoordindates.Length / test))
+    var test = (int)Math.Sqrt(mapSize.MapCoordindates.Length);
+    if (direction == "move east" && (playerLocX >= 0 && (playerLocX + 1) <= test))
     {
         player.playerLocation = new Location(playerLocY, playerLocX += 1);
         return;
-    } else
+    } 
+    if (direction == "move west" && ((playerLocX - 1) >= 0 && playerLocX <= test))
     {
         player.playerLocation = new Location(playerLocY, playerLocX -= 1);
         return;
+    }
+    if (direction == "move south" && (playerLocY >= 0 && (playerLocY + 1) <= test))
+    {
+        player.playerLocation = new Location(playerLocY + 1, playerLocX);
+    }
+    if (direction == "move north" && ((playerLocY - 1) >= 0 && playerLocY <= test))
+    {
+        player.playerLocation = new Location(playerLocY - 1, playerLocX);
     }
 
 
