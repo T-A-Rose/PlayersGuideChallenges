@@ -5,6 +5,7 @@ var cavernEntrance = new CavernEntrance(new Location(0, 0));
 var pit = new Pit(new Location(3, 2));
 var fountainRoom = new Fountain(new Location(0, 2));
 
+Console.BackgroundColor = ConsoleColor.Black;
 Console.WriteLine("Hello adventurer! Would you like to play a small, medium or large game?");
 var mapSize = GameSize();
 
@@ -24,16 +25,22 @@ Console.WriteLine("You find yourself at the cavern entrance of the Fountain of O
 do
 {
     GenerateMessage();
-    if (player.playerLocation == fountainRoom.Location && fountainRoom.OnStatus)
+    if (fountainRoom.OnStatus && player.playerLocation == cavernEntrance.Location)
     {
+        Console.WriteLine("The Fountain of Objects has been re-activated, and you have escaped with your life!");
         Console.WriteLine("You win!");
-        break;;
+        break;
     }
 } while (player.isAlive);
 
 
 void GetCommand()
 {
+    if (fountainRoom.OnStatus != true || player.playerLocation != cavernEntrance.Location)
+    {
+        Console.WriteLine($"You are in the room at (Row={playerLocY}, Column={playerLocX})");
+        Console.Write("What do you want to do? ");
+    }
     var instruction = Console.ReadLine().ToLower();
     ConfirmValidGridLoc(instruction);
 }
@@ -60,21 +67,30 @@ void ConfirmValidGridLoc(string command)
     {
         player.playerLocation = new Location(playerLocY -= 1, playerLocX);
     }
-    if (command == "enable fountain") fountainRoom.OnStatus = true;
+    if (command == "enable fountain")
+    {
+        Console.WriteLine("You successfully activate the Fountain of Objects, now try to find the exit!");
+        fountainRoom.OnStatus = true;
+    }
 }
 
 void GenerateMessage()
 {
-    Console.WriteLine($"You are in the room at (Row={playerLocY}, Column={playerLocX})");
+    GetCommand();
     if (player.playerLocation == pit.Location)
     {
+        Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("You go to step into a dark room, only to lose your footing and fall into a giant pit!");
         player.isAlive = false;
-    } else if (player.playerLocation == fountainRoom.Location)
+    } else if (player.playerLocation == fountainRoom.Location && fountainRoom.OnStatus == false)
     {
+        Console.ForegroundColor = ConsoleColor.Blue;
         Console.WriteLine("You hear water dripping in this room. The Fountain of Objects is here!");
         Console.WriteLine("The fountain must be enabled before you can leave, to do this type in " +
                           "'enable fountain' exactly!");
+    } else if (player.playerLocation == cavernEntrance.Location && fountainRoom.OnStatus == true)
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        return;
     }
-    GetCommand();
 }
