@@ -1,105 +1,198 @@
-﻿int manticoreHealth = 10;
+﻿const string OutOfBoundsFailureMessage = "That wasn't between the boundaries, please enter a value between 0 - 100!";
+
+int manticoreHealth = 10;
 int cityHealth = 15;
 int rounds = 1;
-int range = -1;
-int targetRange = -1;
-int cannonDamage = 0;
+
 while (manticoreHealth > 0)
 {
-    Console.ForegroundColor = ConsoleColor.White;
-    ManticoresDistanceFromCity();
-    Console.Clear();
-    Console.WriteLine($"The City currently has { cityHealth} health and the Manticore has { manticoreHealth} left!");
-    cannonDamage = CalculateCannonDamage(rounds);
-    TargetRangeFromPlayerTwo(range, cannonDamage);
-    Console.ForegroundColor = ConsoleColor.White;
+    int manticoresDistance = getManticoresDistanceFromCity();
+
+    GameIO.Reset();
+
+    GameIO.WriteToOutput($"The City currently has {cityHealth} health and the Manticore has {manticoreHealth} left!");
+
+    var cannonDamage = calculateCannonDamage(rounds);
+
+    Result manticoreHealthResult = new FailureResult();
+
+    using (GameIO.WithColour(cannonDamage.DamageType.GetConsoleColour()))
+    {
+        GameIO.WriteToOutput($"The Cannon will deal {cannonDamage.Value} {cannonDamage.DamageTypeName} damage to the Manticore!");
+
+        manticoreHealthResult = getAttemptToHitManticore(manticoreHealth, manticoresDistance, cannonDamage.Value);
+    }
+
+    if (manticoreHealthResult is SuccessResult<int> successResult)
+    {
+        manticoreHealth = successResult.Value;
+    }
     
-    if  (manticoreHealth > 0 && cityHealth > 0)
+    if (manticoreHealth <= 0)
     {
-        cityHealth -= 1;
-        if (cityHealth <= 0)
-        {
-            Console.WriteLine("The city of Consolas has been destoyed, we didn't destroy the Manticore in time!");
-            Console.ReadLine();
-            break;
-        }
-    } else if (manticoreHealth <= 0)
-    {
-        Console.Write(" The Manticore has been destroyed! The city of Consolas is saved!");
-        Console.ReadLine();
+        GameIO.WriteToOutput("The Manticore has been destroyed! The city of Consolas is saved!");
+
         break;
     }
-    Console.WriteLine($"There has currently been {rounds} round played.");
-    rounds++;
+
+    if (cityHealth < 2)
+    {
+        GameIO.WriteToOutput("The city of Consolas has been destroyed, we didn't destroy the Manticore in time!");
+
+        break;
+    }
+
+    GameIO.WriteToOutput($"There has currently been {rounds++} round played.");
 };
 
-void ManticoresDistanceFromCity()
+Console.ReadLine();
+
+
+int getManticoresDistanceFromCity()
 {
-    Console.WriteLine("Player 1, how far away is the Manticore from the city, between 0 - 100?");
+    GameIO.WriteToOutput("Player 1, how far away is the Manticore from the city, between 0 - 100?");
 
-    //do
-    //{
-    //    range = Convert.ToInt32(Console.ReadLine());
-    //    if (range < 0 || range > 100)
-    //        Console.WriteLine("That wasn't between the boundaries, please enter a value between 0 - 100!");
-    //} while (range < 0 || range > 100);
+    var range = GameIO.GetUserInput((string input, out int range) => int.TryParse(input, out range) && range >= 0 && range <= 100, OutOfBoundsFailureMessage);
 
-    while (true)
+    return range;
+}
+
+Result getAttemptToHitManticore(int currentManticoreHealth, int manticoreRange, int cannonDamage)
+{
+    GameIO.WriteToOutput("Player 2, please enter the desired cannon range, between 0 - 100");
+
+    var targetRange = GameIO.GetUserInput((string x, out int range) => int.TryParse(x, out range) && range > 0 && range < 100, OutOfBoundsFailureMessage);
+
+    if (targetRange < manticoreRange)
     {
-        range = Convert.ToInt32(Console.ReadLine());
-        if (range >= 0 && range <= 100) break;
-        Console.WriteLine("That wasn't between the boundaries, please enter a value between 0 - 100!");
+        GameIO.WriteToOutput("Damn, you undershot the target!");
+
+        return new FailureResult();
+    }
+    if (targetRange > manticoreRange)
+    {
+        GameIO.WriteToOutput("Damn, you overshot the target!");
+
+        return new FailureResult();
+    }
+
+    var resultantManticoreHealth = currentManticoreHealth - cannonDamage;
+
+    GameIO.WriteToOutput($"DIRECT HIT on the Manticore for a total of {cannonDamage}!");
+
+    return new SuccessResult<int>(resultantManticoreHealth);
+}
+
+// FYI, this is the fizz-buzz interview problem that everyone talks about
+Damage calculateCannonDamage(int roundNo)
+{
+    if ((roundNo % 3 == 0) && (roundNo % 5 == 0)) return new(10, DamageType.FIRE_ELECTRIC_BLAST);
+    
+    if (roundNo % 5 == 0) return new(3, DamageType.ELECTRIC_BLAST);
+    
+    if (roundNo % 3 == 0) return new(3, DamageType.FIRE_BLAST); 
+    
+    return new(1, DamageType.STANDARD);
+}
+
+public delegate bool TryParse<TIn, TOut>(TIn input, out TOut output);
+
+public class GameIO
+{
+    public static void WriteToOutput(string message) => Console.WriteLine(message);
+
+    public static IDisposable WithColour(ConsoleColor colour)
+    {
+        _currentOptions = new Options(colour);
+        return _currentOptions;
+    }
+
+    private static Options? _currentOptions;
+
+    private class Options : IDisposable
+    {
+        private readonly ConsoleColor _colourCache;
+
+        public Options(ConsoleColor colour)
+        {
+            _colourCache = Console.ForegroundColor;
+            Console.ForegroundColor = colour;
+        }
+
+        public void Dispose()
+        {
+            Console.ForegroundColor = _colourCache;
+        }
+    }
+
+    public static string GetUserInput(Predicate<string> isInputValid, string messageOnFailure)
+    {
+        while (true)
+        {
+            var input = Console.ReadLine() ?? string.Empty;
+
+            if (isInputValid(input)) return input;
+
+            Console.WriteLine(messageOnFailure);
+        }
+    }
+    
+    public static T GetUserInput<T>(TryParse<string, T> isInputValid, string messageOnFailure)
+    {
+        while (true)
+        {
+            var input = Console.ReadLine() ?? string.Empty;
+
+            if (isInputValid(input, out T output)) return output;
+
+            Console.WriteLine(messageOnFailure);
+        }
+    }
+
+    public static void Reset()
+    {
+        _currentOptions?.Dispose();
+        Console.BackgroundColor = ConsoleColor.White;
+        Console.Clear();
+    }
+}
+
+public abstract record Result;
+
+public record SuccessResult<T>(T Value) : Result;
+
+public record FailureResult() : Result;
+
+public record Damage(int Value, DamageType DamageType)
+{
+    public string DamageTypeName => DamageType switch
+    {
+        DamageType.FIRE_ELECTRIC_BLAST => "fire-electric blast",
+        DamageType.ELECTRIC_BLAST => "electric blast",
+        DamageType.FIRE_BLAST => "fire blast",
+        DamageType.STANDARD => "standard",
+        _ => throw new ArgumentException(nameof(DamageType)),
     };
 }
 
-void TargetRangeFromPlayerTwo(int manticoreRange, int cannonDamage)
+public enum DamageType
 {
-    Console.WriteLine("Player 2, please enter the desired cannon range, between 0 - 100");
-    do
-    {
-        targetRange = Convert.ToInt32(Console.ReadLine());
-        if (targetRange == manticoreRange)
-        {
-            manticoreHealth = manticoreHealth - cannonDamage;
-            Console.WriteLine($"DIRECT HIT on the Manticore for a total of {cannonDamage}!");
-            break;
-        }
-        else if (targetRange < manticoreRange && targetRange > 0)
-        {
-            Console.WriteLine("Damn, you undershot the target!");
-            break;
-        }
-        else if (targetRange > manticoreRange && targetRange < 100)
-        {
-            Console.WriteLine("Damn, you overshot the target!");
-            break;
-        }
-        Console.WriteLine("That wasn't between the boundaries, please enter a value between 0 - 100!");
-    } while (targetRange < 0 || targetRange > 100);
+    FIRE_ELECTRIC_BLAST,
+    ELECTRIC_BLAST,
+    FIRE_BLAST,
+    STANDARD
 }
 
-int CalculateCannonDamage(int roundNo)
+public static class DamageTypeConsoleColourExtensions
 {
-    if ((roundNo % 3 == 0) && (roundNo % 5 == 0))
+    public static ConsoleColor GetConsoleColour(this DamageType damageType) => damageType switch
     {
-        Console.ForegroundColor = ConsoleColor.Magenta;
-        Console.WriteLine("The Cannon will deal 10 fire-electric blast damage to the Manticore!");
-        return 10;
-    } 
-    if (roundNo % 5 == 0)
-    {
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("The Cannon will deal 3 electric blast damage to the Manticore!");
-        return 3;
-    } 
-    if (roundNo % 3 == 0)
-    {
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine("The Cannon will deal 3 fire blast damage to the Manticore!");
-        return 3;
-    } 
-        Console.WriteLine("The Cannon will deal 1 damage to the Manticore!");
-        return 1;
+        DamageType.FIRE_ELECTRIC_BLAST => ConsoleColor.Magenta,
+        DamageType.ELECTRIC_BLAST => ConsoleColor.Yellow,
+        DamageType.FIRE_BLAST => ConsoleColor.Red,
+        DamageType.STANDARD => ConsoleColor.White,
+        _ => ConsoleColor.White,
+    };
 }
 
 
