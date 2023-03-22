@@ -41,42 +41,25 @@ void ValidLocation()
 
 void ConfirmValidGridLoc(string direction)
 {
-    var test = (int)Math.Sqrt(mapSize.MapCoordindates.Length);
-    if (direction == "move east" && (playerLocX >= 0 && (playerLocX + 1) <= test))
+    var gridEnd = (int)Math.Sqrt(mapSize.MapCoordindates.Length);
+    if (direction == "move east" && (playerLocX >= 0 && (playerLocX + 1) <= gridEnd))
     {
         player.playerLocation = new Location(playerLocY, playerLocX += 1);
         return;
     } 
-    if (direction == "move west" && ((playerLocX - 1) >= 0 && playerLocX <= test))
+    if (direction == "move west" && ((playerLocX - 1) >= 0 && playerLocX <= gridEnd))
     {
         player.playerLocation = new Location(playerLocY, playerLocX -= 1);
         return;
     }
-    if (direction == "move south" && (playerLocY >= 0 && (playerLocY + 1) <= test))
+    if (direction == "move south" && (playerLocY >= 0 && (playerLocY + 1) <= gridEnd))
     {
-        player.playerLocation = new Location(playerLocY + 1, playerLocX);
+        player.playerLocation = new Location(playerLocY += 1, playerLocX);
+        return;
     }
-    if (direction == "move north" && ((playerLocY - 1) >= 0 && playerLocY <= test))
+    if (direction == "move north" && ((playerLocY - 1) >= 0 && playerLocY <= gridEnd))
     {
-        player.playerLocation = new Location(playerLocY - 1, playerLocX);
+        player.playerLocation = new Location(playerLocY -= 1, playerLocX);
     }
-
-
-
-    //} else if ((direction == "move west") && ((playerLocX + 1) >= 0 && playerLocX <= mapSize.MapCoordindates.Length / test))
-    //{
-    //    player.playerLocation = new Location(playerLocY, playerLocX -= 1);
-    if ((direction == "move north") && (playerLocY < 0 || (playerLocY - 1) > mapSize.MapCoordindates.Length / test))
-    {
-        player.playerLocation = new Location(playerLocY -= 1, playerLocY);
-
-    } else
-    {
-        player.playerLocation = new Location(playerLocY += 1, playerLocY);
-    }
-    //} else if ((direction == "move south") && ((playerLocY + 1) < 0 || playerLocY > mapSize.MapCoordindates.Length / test))
-    //{
-    //    player.playerLocation = new Location(playerLocY += 1, playerLocY);
-    //}
 }
 
